@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)http://xycrgl.cug.edu.cn/ -->
+<html style="font-size: 253.733px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>通行预约系统</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="./通行预约系统_files/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="./通行预约系统_files/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="./通行预约系统_files/style.css">
+    <script src="./通行预约系统_files/flexible.js.下载" type="text/javascript" charset="utf-8"></script>
+    <script src="./通行预约系统_files/swiper-bundle.min.js.下载"></script>
+    <script src="./通行预约系统_files/vue.min.js.下载" type="text/javascript" charset="utf-8"></script>
+    <script src="./通行预约系统_files/axios.js.下载" type="text/javascript"></script>
+
+</head>
+
+<body _c_t_common="1" style="font-size: 12px;">
+    <div id="app"><div class="top-bar"><span>通行预约系统</span></div> <div class="slider"><div class="swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events"><div class="swiper-wrapper" id="swiper-wrapper-cfd5c2999c724b86" aria-live="off" style="transition-duration: 0ms; transform: translate3d(-10504.6px, 0px, 0px);"><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0" role="group" aria-label="1 / 9"><img src="./通行预约系统_files/banner1.png" alt="" style="border-radius: 18px;"></div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="1" role="group" aria-label="2 / 9"><img src="./通行预约系统_files/banner1.png" alt="" style="border-radius: 18px;"></div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="2" role="group" aria-label="3 / 9"><img src="./通行预约系统_files/banner1.png" alt="" style="border-radius: 18px;"></div><div class="swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="0" role="group" aria-label="4 / 9"><img src="./通行预约系统_files/banner1.png" alt="" style="border-radius: 18px;"></div> <div class="swiper-slide swiper-slide-duplicate-next" data-swiper-slide-index="1" role="group" aria-label="5 / 9"><img src="./通行预约系统_files/banner1.png" alt="" style="border-radius: 18px;"></div> <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="2" role="group" aria-label="6 / 9"><img src="./通行预约系统_files/banner1.png" alt="" style="border-radius: 18px;"></div><div class="swiper-slide swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="0" role="group" aria-label="7 / 9"><img src="./通行预约系统_files/banner1.png" alt="" style="border-radius: 18px;"></div><div class="swiper-slide swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="1" role="group" aria-label="8 / 9"><img src="./通行预约系统_files/banner1.png" alt="" style="border-radius: 18px;"></div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="2" role="group" aria-label="9 / 9"><img src="./通行预约系统_files/banner1.png" alt="" style="border-radius: 18px;"></div></div> <div class="swiper-pagination swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div></div> <div class="quick-nav"><ul><li id="biaodan"><img src="./通行预约系统_files/icon-yy.png" alt=""> <span>预约申请</span></li> <li id="zhuangtai"><img src="./通行预约系统_files/icon-bg.png" alt=""> <span>预约状态</span></li> <li id="oa"><img src="./通行预约系统_files/icon-tjk.png" alt=""> <span>外出须知</span></li> <li id="shenpi"><img src="./通行预约系统_files/icon-wdtj.png" alt=""> <span>预约审批</span></li></ul></div> <div class="services"><div class="title"><span>更多服务</span></div> <div class="list"><ul><li id="fanxiao"><p>退出登录</p> <span>重新进行身份统一认证</span></li> <li id="daka"><p>信息上报</p> <span>健康打卡，每日报平安</span></li></ul></div></div></div>
+
+
+
+    <div id="myshow" style="display:none;width:80vw;height:auto;top:22vh;position:absolute;background: #fff;z-index: 999;left:10vw;border-radius: 36px;box-shadow: 0px 0px 16px 1px #DCDFE6;">
+        
+        
+        <p style="width:100%;text-align: center;margin-top: 17px;font-size: 18px;font-weight: 520;;">重复申请提示</p>
+        <p style="width:100%;padding:16px;margin-top: 2px;font-size: 16px;line-height: 28px;">系统检测到你在未来时间已经存在通行申请记录，当多条外出申请通过时，新申请会覆盖旧申请，旧申请随之失效，故当您需要出行时，请妥善规划您的出行时间，非必要不外出，一出一申请！</p>
+        <p style="width:90%;margin-left:5%;margin-top:2px;height:1px;background: #DCDFE6;"></p>
+
+        <div style="width:100%;display:flex;flex-direction:row;margin-bottom: 17px;;">
+            <p id="mycancel" style="width:50%;text-align:center;margin-top: 22px;font-size: 18px;font-weight: 520;">取消</p>
+            <p id="myconfirm" style="width:50%;text-align:center;margin-top: 22px;font-size: 18px;font-weight: 520;color:#409EFF;">继续申请</p>
+
+
+        </div>
+    
+    </div>
+
+    <div id="myshow2" style="display:none;width:80vw;height:auto;top:22vh;position:absolute;background: #fff;z-index: 999;left:10vw;border-radius: 36px;box-shadow: 0px 0px 16px 1px #DCDFE6;">
+        
+        
+        <p style="width:100%;text-align: center;margin-top: 17px;font-size: 18px;font-weight: 520;;">外出须知</p>
+        <p style="width:100%;padding:16px;margin-top: 2px;font-size: 16px;line-height: 28px;overflow: scroll;height:40vh;">1.坚持非必要不外出，非必要不离汉，确需外出要履行请假报备手续，返校后要第一时间向培养单位报告。<br>
+            2.如实报备外出事由、外出时间和外出地点，按照请假时间进出学校，按照请假事由和外出地点点对点活动，不得私自改变行程路线，不得夜不归宿或校外留宿。<br>
+            3.严格遵守疫情防控要求，履行疫情防控个人责任，做好个人健康监测，若有发热、咳嗽等可疑症状，要及时向培养单位报告。<br>
+            4.做好个人防护，外出时要全程佩戴口罩，在公共场所要保持安全社交距离，避免前往人员密集场所。<br>
+            5.如因谎报、瞒报外出事由或隐瞒外出行程或未如实报告疑似症状而造成严重后果的，将依法依规追究相关责任。<br>
+            6.认真学习安全知识，提高安全防范技能，注意饮食安全、人身财产安全、意外溺水等安全隐患，增强金融风险防范意识，警惕各类电信网络诈骗。</p>
+        <p style="width:90%;margin-left:5%;margin-top:2px;height:1px;background: #DCDFE6;"></p>
+
+        <div style="width:100%;display:flex;flex-direction:row;margin-bottom: 17px;;">
+            <p id="mycancel2" style="width:50%;text-align:center;margin-top: 22px;font-size: 18px;font-weight: 520;">取消</p>
+            <input id="btnSub" type="button" value="请稍等" disabled="true" style="width:50%;text-align:center;margin-top: 22px;font-size: 18px;font-weight: 520;background-color: transparent; border: 0;" onclick="read()">
+            
+
+        </div>
+    
+    </div>
+
+
+<script type="text/javascript">
+    var s=5;
+    
+    function daoJiShi(){
+        var btnSub=document.getElementById("btnSub");
+    
+        if(btnSub){
+            if(s<=0){
+                btnSub.value="确认";
+    
+                btnSub.disabled=false;
+    
+                clearInterval(id);
+    
+            }
+    
+            else{
+                btnSub.value="请等待"+s+"秒";
+    
+                s--;
+    
+            }
+    
+        }
+    
+    }
+    
+   
+</script>
+
+
+<script type="text/javascript">
+    // alert("预约系统暂时关闭！");
+    new Vue({
+        el: '#app',
+        data: {
+            activeTab: 1,
+            swiper: null
+        },
+        mounted: function () {
+            this.$nextTick(function () {
+                this.swiper = new Swiper('.swiper-container', {
+                    autoplay: true,
+                    loop: true,
+                    slidesPerView: 'auto',
+                    centeredSlides: true,
+                    pagination: {
+                        el: '.swiper-pagination'
+                    }
+                })
+            })
+        },
+        methods: {
+            // 切换tap-bar
+            changeTab: function (item) {
+                this.activeTab = item
+            },
+            // 预约
+            yuyue(){
+                alert("预约成功")
+            }
+        }
+    })
+
+    function read(){
+        document.getElementById("myshow2").style.display = "none";
+        axios({
+                    // 请求方式
+                    method: 'GET',
+                    // 请求的地址
+                    url: 'http://xycrgl.cug.edu.cn/reserve.php/reserve/notice',
+                    
+                    // 请求体参数
+                    data: {}
+                    }).then(function (result) {
+                    console.log(result.data[0]['num']);
+                    if(result.data[0]['num'] > 0 ){
+                        //alert("预约数量大于1！");
+                        //document.getElementById("myshow").style.display="";
+                        alert('已存在审批记录，请勿重复申请！');
+                    }
+                    else{
+                        self.location='http://xycrgl.cug.edu.cn/reserve.php/reserve/myadd'; 
+                    }
+                    })
+
+        console.log("进入表单");
+        
+    }
+
+
+    var zhuangtai = document.getElementById("zhuangtai");
+    zhuangtai.addEventListener("click", gotoshenpi);
+
+    var shenpi = document.getElementById("shenpi");
+    shenpi.addEventListener("click", gotoshenpi);
+
+    function gotoshenpi(){
+        
+        console.log("进入审批");
+        self.location='./预约审批.html'; 
+
+    
+    }
+
+    var fanxiao = document.getElementById("fanxiao");
+    fanxiao.addEventListener("click", gotofanxiao);
+
+    var daka = document.getElementById("daka");
+    daka.addEventListener("click", gotodaka);
+
+    function gotofanxiao(){
+        
+        console.log("退出");
+        self.location='http://xycrgl.cug.edu.cn/preserve/index.php?logout='; 
+
+    
+    }
+
+    function gotodaka(){
+        
+        console.log("进入打卡");
+        self.location='http://yqapp.cug.edu.cn/xsfw/sys/swmxsyqxxsjapp/*default/index.do'; 
+
+    
+    }
+
+    var biaodan = document.getElementById("biaodan");
+    biaodan.addEventListener("click", gotobiaodan);
+
+    function gotobiaodan(){
+        document.getElementById("myshow2").style.display="";
+        var id = setInterval('daoJiShi()',1000); 
+
+    
+	
+    }
+
+    document.getElementById("mycancel").addEventListener("click", mycancel);
+    document.getElementById("mycancel2").addEventListener("click", mycancel2);
+
+    function mycancel(){
+        document.getElementById("myshow").style.display="none";
+    }
+    function mycancel2(){
+        document.getElementById("myshow2").style.display="none";
+    }
+
+    document.getElementById("myconfirm").addEventListener("click", myconfirm);
+
+    function myconfirm(){
+        
+        
+        self.location='http://xycrgl.cug.edu.cn/reserve.php/reserve/myadd'; 
+    
+    }
+	
+    
+
+	var oa = document.getElementById("oa");
+    oa.addEventListener("click", gotooa);
+
+    function gotooa(){
+        
+        console.log("进入表单");
+        self.location='http://xycrgl.cug.edu.cn/index/index/notice'; 
+    
+    }
+
+</script><!--div id="fatkun-drop-panel">
+        <a id="fatkun-drop-panel-close-btn">×</a>
+            <div id="fatkun-drop-panel-inner">
+                <div class="fatkun-content">
+                    <svg class="fatkun-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5892"><path d="M494.933333 782.933333c2.133333 2.133333 4.266667 4.266667 8.533334 6.4h8.533333c6.4 0 10.666667-2.133333 14.933333-6.4l2.133334-2.133333 275.2-275.2c8.533333-8.533333 8.533333-21.333333 0-29.866667-8.533333-8.533333-21.333333-8.533333-29.866667 0L533.333333 716.8V128c0-12.8-8.533333-21.333333-21.333333-21.333333s-21.333333 8.533333-21.333333 21.333333v588.8L249.6 475.733333c-8.533333-8.533333-21.333333-8.533333-29.866667 0-8.533333 8.533333-8.533333 21.333333 0 29.866667l275.2 277.333333zM853.333333 874.666667H172.8c-12.8 0-21.333333 8.533333-21.333333 21.333333s8.533333 21.333333 21.333333 21.333333H853.333333c12.8 0 21.333333-8.533333 21.333334-21.333333s-10.666667-21.333333-21.333334-21.333333z" p-id="5893"></path></svg>
+                    <div class="fatkun-title">拖拽到此处</div>
+                    <div class="fatkun-desc">图片将完成下载</div>
+                </div>
+            </div>
+    </div--></body></html>
